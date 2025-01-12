@@ -32,7 +32,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       -
         name: Publish release on GitHub
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           name: 'VulnerableApp-${{ steps.TAG.outputs.LATEST_VERSION }}'
           tag_name: '${{ steps.TAG.outputs.LATEST_VERSION }}'
